@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<!--<p>{{ message }}</p>
+		<input v-model="message">
+
+		<ul>
+		    <li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ul>
+
+		-->
+		<!-- take in some text and reverse it 
+		<p>{{ message }}</p>
+		<input v-model="message">
+		<button v-on:click="reverseMessage">Reverse Message</button>
+		-->
+
+		<input v-model="newTodo" v-on:keyup.enter="addTodo"><button v-on:click="addTodo">Add Item</button>
+		<ul>
+			<li v-for="todo in todos">
+				<span>{{ todo.text }}</span>
+				<button v-on:click="removeTodo($index)">Remove</button>
+			</li>
+		</ul>
+
+		<button v-on:click="removeAll">Clear List</button>
+
+	</div>
+
+
+
+
+</body>
+	<script src="scripts/vue.js"></script>
+	<script src="scripts/app.js"></script>
+</html>
